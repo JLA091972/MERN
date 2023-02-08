@@ -24,6 +24,11 @@
         Another task: This should be another feature. 
         I want to click anywhere in this paragraph tag and I want to be able to change the background color to whatever is in this input: <input type="text"/>.
     </p>
+    <p >
+        <span id="entercolor" >  Another task: This should be another feature. 
+        I want to click anywhere in this paragraph tag and I want to be able to change the background color to whatever is in this input: <input type="text" name="color"> </span>
+    </p>
+
     <script>
         document.getElementById("button").onclick = () => setBackgroundColorById("paragraph", "blue");
         
@@ -32,7 +37,9 @@
         document.getElementById("hover-this").onmouseover = () => setBackgroundColorById("body", "red");
         
         document.getElementById("hover-this").onmouseout = () => setBackgroundColorById("body", "white");
-        
+
+        document.getElementById("entercolor").onmouseout = () => setBackgroundColorById("body", `${color}`);
+
         getValueFromId = id => document.getElementById(id).value;
         setBackgroundColorById = (id, color) => document.getElementById(id).style = "background-color: " + color;
         mouseOverFunction = el => el.style = "background-color: black";
