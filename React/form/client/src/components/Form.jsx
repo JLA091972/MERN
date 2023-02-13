@@ -4,15 +4,15 @@ import React, { useState } from 'react'
 const Form = () => {
     const [firstname, setFirstName] = useState ("")
     const [lastname, setLastName] = useState ("")
+    const [email, setEmail] = useState ("")
     const [password, setPassword] = useState ("")
     const [confirmpassword, setConfirmPassword] = useState ("")
-
     const [perosnalInfo, setPersonalInfo] = useState([]);
 
     const submitHandler = (e) => {
         e.preventDefault()
         
-        let personalObj = {firstname, lastname, password, confirmpassword}
+        let personalObj = {firstname, lastname, email, password, confirmpassword}
         setPersonalInfo([...perosnalInfo, personalObj])
 
 
@@ -35,6 +35,14 @@ const Form = () => {
                         lastname.length >0  && lastname.length < 2 ? <p className = 'text-danger'> Last Name should be greater than 2 chars </p> : ''
                     }
                 </div>
+                <div>
+                    <label>Email Address </label>
+                    <input type="text" onChange={(e) => {setLastName(e.target.value)}} className="form-control" />
+                    {
+                        email.length >0  && email.length < 2 ? <p className = 'text-danger'> Last Name should be greater than 2 chars </p> : ''
+                    }
+                </div>
+
                 <div>
                     <label>Password </label>
                     <input type="text" onChange={(e) => {setPassword(e.target.value)}} className="form-control" />
