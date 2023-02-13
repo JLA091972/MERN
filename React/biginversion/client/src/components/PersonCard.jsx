@@ -29,12 +29,14 @@ import React from "react";
 
 const PersonCard = (props) => {
 
+    const {personName,lastName,personAge,personHaircolor}=props;
+
     return (
         <div>
             <h1>Person Info:</h1>
-            <h4> Name: {props.personName} {props.lastName}</h4>
-            <p> Age: {props.personAge}  <br />
-                Hair Color: {props.personHaircolor}</p>
+            <h4> Name: {personName} {lastName}</h4>
+            <p> Age: {personAge}  <br />
+                Hair Color: {personHaircolor}</p>
         </div>
     )
 }
