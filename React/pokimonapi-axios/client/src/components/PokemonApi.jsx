@@ -20,7 +20,7 @@ const PokemonApi = () => {
     return (
         <div>
             <h1>Pokemon Names</h1>
-            <button onClick={fetchPokemon}>Get 807 Pokemons</button>
+            <button onClick={fetchPokemon}>Fetch Pokemons</button>
             {
                 pokemons.map((pokemon, id) => {
                     return (
