@@ -3,7 +3,7 @@ import axios from "axios"
 import { useParams } from 'react-router-dom'
 
 const Starships = () => {
-    const { id } = useParams();
+    const {id} = useParams();
     const [info, setInfo] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -16,9 +16,7 @@ const Starships = () => {
             .catch((err) => {
                 console.log("Error encountered pulling information: ", err)
                 setErrorMessage('No records found');
-
             })
-
     }, [id])
 
 
