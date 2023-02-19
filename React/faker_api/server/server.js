@@ -16,28 +16,28 @@ app.use(express.urlencoded({ extended: true }))
 //     { name: "Jane Fonda", company: "Leotards are us" },
 //     { name: "Marylyn Monroe", company: "MGM Studios"  },
 //     { name: "Tom Cruise", company: "Top gun studios"  },
-    
+
 // ]
 
 
 
 //create 
-class Someone{
-    constructor(){
+class Someone {
+    constructor() {
         // this.name = faker.name.firstName()
-   }
+    }
 }
 
 
 const { faker } = require('@faker-js/faker')
 
-app.get("/api/randomname", ({req,res}) => {
+app.get("/api/randomname", ({ req, res }) => {
     const randomname = faker.name.findName()
     res.json(randomname)
 })
 
-app.get("/api/someone/new", (req,res) => {
-    const newPerson = new Someone ()
+app.get("/api/someone/new", (req, res) => {
+    const newPerson = new Someone()
     res.json(randomname)
 })
 
