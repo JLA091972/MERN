@@ -14,7 +14,7 @@ const JokeSchema = new mongoose.Schema({
     punchline: {
         type: String,
         required: [true, "Punchline is needed to make people laugh!!"],  //what message to comback for validation
-        minlenght: [10, "Joke must be 10 char long"]
+        minlenght: [3, "Joke must be 10 char long"]
     },
 },
     { timestamps: true }  //keep track of time stamps
