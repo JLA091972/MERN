@@ -7,6 +7,9 @@ module.exports = (app) => {
     //create call back function with 2 arg. req=request and res=response
     app.post("/api/jokes/new", JokesController.addJoke);
 
+    //random
+    app.get("/api/jokes/random", JokesController.randomJoke)
+
     //read one
     app.get("/api/jokes/:id", JokesController.oneJoke);
 
@@ -18,4 +21,6 @@ module.exports = (app) => {
 
     //delete
     app.delete("/api/jokes/delete/:id", JokesController.deleteJoke);
+
+
 }

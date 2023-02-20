@@ -56,3 +56,12 @@ module.exports.deleteJoke = (req, res) => {
         });
 }
 
+module.exports.randomJoke = (req, res) => {
+    Joke.aggregate([{$sample:{size:1}}] )
+        .then(oneRandomJoke => {
+            res.json({ results: oneRandomJoke })
+        })
+        .catch((err) => {
+            res.json({ message: 'Error encountered:', error: err })
+        });
+}
