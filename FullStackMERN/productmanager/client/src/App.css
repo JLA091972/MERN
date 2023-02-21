@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.tiled-ul {
+  display: inline;
+  margin-left: 50%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
