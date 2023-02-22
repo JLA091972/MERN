@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import Main from "./views/Main";
 import DisplayOne from "./views/DisplayOne";
+import EditItem from "./views/EditItem";
 
 
 
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/:id" element={<DisplayOne/>} />
-        
+        <Route path="/:id/edit" element={<EditItem/>}/>
       </Routes>
 
     </div>
