@@ -10,17 +10,16 @@ module.exports = (app) => {
     // //random
     // app.get("/api/products/random", ProductsController.randomProduct)
 
-    //read one
-    app.get("/api/products/:id", ProductsController.oneProduct);
-
     //read all
     app.get("/api/products", ProductsController.allProducts);
 
     //update
-    app.put("/api/products/update/:id", ProductsController.updateProduct);
+    app.put("/api/products/:id/edit", ProductsController.updateProduct);
 
     //delete
     app.delete("/api/products/delete/:id", ProductsController.deleteProduct);
 
+ //read one
+    app.get("/api/products/:id", ProductsController.oneProduct);
 
 }
